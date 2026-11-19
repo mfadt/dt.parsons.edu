@@ -1,27 +1,47 @@
 /* Parsons Design & Technology — chance score
-   Ground: newsprint. Ink. Red pencil for instructions and the action only. */
+   Ground: newsprint. Ink. Red pencil for instructions and the action only.
+   Type: The New School's own Neue and Neue Display (Typotheque, 2014),
+   served by the university font host, fonts.newschool.edu. */
 
 @font-face {
-  font-family: "Archivo";
-  font-style: normal;
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
-  font-display: swap;
-  src: url("../fonts/archivo-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Courier Prime";
+  font-family: "Neue";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/courierprime-400.woff2") format("woff2");
+  src: url("https://fonts.newschool.edu/fonts/neue-Regular.woff2") format("woff2"),
+       url("https://fonts.newschool.edu/fonts/neue-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "Courier Prime";
+  font-family: "Neue";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/courierprime-700.woff2") format("woff2");
+  src: url("https://fonts.newschool.edu/fonts/neue-Bold.woff2") format("woff2"),
+       url("https://fonts.newschool.edu/fonts/neue-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Neue Display";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://fonts.newschool.edu/fonts/neueDisplay-Black.woff2") format("woff2"),
+       url("https://fonts.newschool.edu/fonts/neueDisplay-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Neue Display Wide";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://fonts.newschool.edu/fonts/neueDisplay-Wide.woff2") format("woff2"),
+       url("https://fonts.newschool.edu/fonts/neueDisplay-Wide.woff") format("woff");
+}
+@font-face {
+  font-family: "Neue Display Random";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://fonts.newschool.edu/fonts/neueDisplay-Random.woff2") format("woff2"),
+       url("https://fonts.newschool.edu/fonts/neueDisplay-Random.woff") format("woff");
 }
 
 :root {
@@ -33,8 +53,10 @@
   --red: #c2255c;
   --red-ink: #a81e4c;
 
-  --display: "Archivo", "Helvetica Neue", Helvetica, sans-serif;
-  --type: "Courier Prime", "Courier New", Courier, monospace;
+  --display: "Neue Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display-wide: "Neue Display Wide", "Neue Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display-random: "Neue Display Random", "Neue Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --type: "Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --gutter: clamp(1rem, 4vw, 3.5rem);
   --rule: 1px solid var(--ink-18);
@@ -50,6 +72,7 @@
 html {
   background: var(--ground);
   -webkit-text-size-adjust: 100%;
+  font-synthesis: none;
   overflow-x: hidden;
 }
 
@@ -58,8 +81,8 @@ body {
   background: var(--ground);
   color: var(--ink);
   font-family: var(--type);
-  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
-  line-height: 1.65;
+  font-size: clamp(1rem, 0.9rem + 0.25vw, 1.125rem);
+  line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -106,7 +129,7 @@ a:hover {
   padding: clamp(1.6rem, 4vh, 3rem) 0;
   border-right: var(--rule);
   font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-70);
   pointer-events: none;
@@ -116,7 +139,6 @@ a:hover {
 .spine b {
   color: var(--ink);
   font-weight: 700;
-  font-variant-numeric: tabular-nums;
 }
 
 .spine span {
@@ -186,8 +208,8 @@ a:hover {
   gap: 1rem;
   border-bottom: 1px solid var(--ink);
   padding-bottom: 0.5rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-70);
   flex-wrap: wrap;
@@ -198,22 +220,25 @@ a:hover {
   grid-row: 2;
   margin: 0;
   font-family: var(--display);
-  font-weight: 800;
-  font-stretch: 110%;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
 }
 
 .mast-parsons {
   display: block;
   font-size: clamp(1.6rem, 3.6vw, 3.4rem);
-  font-weight: 700;
 }
 
+/* The New School's Random cut: its letters change width by contextual
+   alternates (the `liga` feature), the house face's own chance operation.
+   Tracking must stay 0: any letter-spacing switches ligatures off. */
 .mast-dt {
   display: block;
-  font-size: clamp(2.5rem, 9vw, 8.5rem);
+  font-family: var(--display-random);
+  font-size: clamp(2.5rem, 7.8vw, 7.1rem);
+  letter-spacing: 0;
 }
 
 .premise {
@@ -221,9 +246,9 @@ a:hover {
   grid-row: 3;
   align-self: center;
   margin: 0;
-  max-width: 68ch;
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-  line-height: 1.6;
+  max-width: 30em;
+  font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+  line-height: 1.4;
   text-wrap: pretty;
 }
 
@@ -247,12 +272,11 @@ a:hover {
 
 .apply {
   display: inline-block;
-  font-family: var(--display);
-  font-weight: 800;
-  font-stretch: 115%;
-  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  font-family: var(--display-wide);
+  font-weight: 900;
+  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--red);
@@ -281,7 +305,7 @@ a:hover {
 
 .visit {
   margin: 0.7rem 0 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ink-70);
 }
 
@@ -298,13 +322,12 @@ a:hover {
   gap: clamp(1rem, 3vw, 2.5rem);
   border-top: var(--rule);
   padding-top: 1.1rem;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   color: var(--ink-70);
 }
 
 .cast b {
   color: var(--ink);
-  font-variant-numeric: tabular-nums;
 }
 
 .hexagram {
@@ -319,8 +342,8 @@ a:hover {
 }
 
 .cast-record p {
-  margin: 0 0 0.35rem;
-  max-width: 36em;
+  margin: 0 0 0.3rem;
+  max-width: 34em;
 }
 
 #recast {
@@ -349,12 +372,11 @@ a:hover {
 
 .sheet h2 {
   margin: 0 0 clamp(1.4rem, 3.5vh, 2.4rem);
-  font-family: var(--display);
-  font-weight: 700;
-  font-stretch: 120%;
-  font-size: clamp(1.6rem, 4vw, 2.9rem);
+  font-family: var(--display-wide);
+  font-weight: 900;
+  font-size: clamp(1.8rem, 4.4vw, 3.2rem);
   line-height: 1;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -368,7 +390,7 @@ a:hover {
   margin: 0 0 0.8rem;
   font-size: 0.75rem;
   font-weight: 400;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-70);
 }
@@ -433,8 +455,8 @@ a:hover {
 }
 
 .ledger a {
-  font-size: 0.85em;
-  letter-spacing: 0.04em;
+  font-size: 0.875em;
+  letter-spacing: 0.02em;
   color: var(--ink-70);
 }
 
@@ -477,16 +499,14 @@ a:hover {
 
 .axis-year {
   font-family: var(--display);
-  font-weight: 700;
-  font-stretch: 110%;
+  font-weight: 900;
   font-size: clamp(1.15rem, 2.2vw, 1.6rem);
-  font-variant-numeric: tabular-nums lining-nums;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
 .axis-what {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-70);
 }
@@ -513,12 +533,12 @@ a:hover {
 }
 
 .apply-foot {
-  font-size: clamp(1.6rem, 4vw, 2.9rem);
+  font-size: clamp(1.8rem, 4.4vw, 3.2rem);
 }
 
 .come {
   margin: 0 0 1.6rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .come b {
@@ -527,9 +547,9 @@ a:hover {
 
 .record {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--ink-70);
-  max-width: 62ch;
+  max-width: 40em;
 }
 
 /* ── motion: one authored performance; content visible by default ── */
@@ -626,15 +646,15 @@ html.performed .ax-drawn li {
     columns: 1;
   }
 
-  .masthead {
-    font-stretch: 100%;
+  .mast-parsons {
+    font-size: clamp(1.15rem, 5vw, 1.6rem);
   }
 
   .mast-dt {
-    font-size: clamp(1.85rem, 9.4vw, 3.4rem);
+    font-size: clamp(1.85rem, 9vw, 3.4rem);
   }
 
   .apply {
-    font-size: clamp(1.7rem, 8vw, 2.4rem);
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
   }
 }

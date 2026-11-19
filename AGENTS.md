@@ -26,9 +26,8 @@ Layout: one `main.sheet` (max-width 74rem) over `canvas.layer--far|mid|near` (z 
 | Path | Purpose |
 |---|---|
 | `index.html` | The whole page; sections `#lead`, `#faculty`, `#academics`, `#archive`, `#close`. Content hardcoded here. |
-| `css/score.css` | Entire stylesheet (640 lines): tokens, layout, motion, media queries. |
+| `css/score.css` | Entire stylesheet: `@font-face` rules, tokens, layout, motion, media queries. |
 | `js/score.js` | Entire script (352 lines): chance engine, canvas drawing, parallax, folio, axis reveal. |
-| `fonts/` | Self-hosted woff2 only: `archivo-latin.woff2` (variable), `courierprime-400/700.woff2`. |
 | `docs/content.md` | Copy + link authority (faculty names, URLs, thesis years). |
 | `PRODUCT.md` | Product spec: audience, principles, constraints. |
 | `DESIGN.md` | Design contract: full token/component/motion specs. Source of truth for any visual change. |
@@ -60,10 +59,10 @@ Verify at 320, 390, 560, 980, 1440 px; check with JS disabled and with reduced m
 - All color/spacing via `:root` tokens: `--ground #e4e2db`, `--ink #14171a`, `--ink-70/-45/-18` alphas, `--red #c2255c`, `--red-ink #a81e4c`, `--rule`, `--gutter clamp(1rem,4vw,3.5rem)`, `--step-sec clamp(3.5rem,9vh,6rem)`.
 
 **Design rules that bind changes** (full text in `DESIGN.md`; treat these as lint rules):
-- Two-Voice Rule: text only in Archivo (display, 700–800, wdth 110–120, uppercase, negative tracking) or Courier Prime (reading text). Three `@font-face` declarations are the whole type system. No italic, no synthesized weight.
+- Two-Voice Rule: text only in The New School's Neue Display (lettering, 900, uppercase: Random cut on the masthead line at tracking 0 — any letter-spacing kills its ligature alternates; Wide for h2/APPLY; Black for PARSONS and axis years) or Neue 400/700 (reading text). Five `@font-face` declarations are the whole type system. No italic, no synthesized weight (`font-synthesis: none`).
 - Red-Pencil / Two Reds Rule: `red` only at display size or as mark/rule/selection; `red-ink` for every red at text size. Text tones are `--ink` and `--ink-70` only; `ink-45`/`ink-18` are rules, never text. New neutral hex = defect.
 - Flat Sheet Rule: no `box-shadow`, `text-shadow`, blur, `border-radius`, cards, fills, or gradients anywhere. Structure from hairlines + a solid ink rule per section heading.
-- Measures: premise 68ch, ledger 46rem, footer record 62ch. Breakpoints: 980px and 560px only.
+- Measures: premise 30em, ledger 46rem, cast record 34em, footer record 40em. Breakpoints: 980px and 560px only.
 - Easing: `cubic-bezier(0.16, 1, 0.3, 1)` everywhere. Receipt Rule: any chance output shown must carry its provenance (seed, cast).
 - Don't change `--ground` to a whiter paper; don't put a label line above a section heading; anchor text = degree/destination words, never URLs or "click here".
 
@@ -80,7 +79,7 @@ Verify at 320, 390, 560, 980, 1440 px; check with JS disabled and with reduced m
 
 - No runtime required to build (none exists). Serve with `python3 -m http.server`; `node`/`npm`/`npx` are on the box but add nothing to the project — do not introduce a package.json.
 - `bun`, `deno`, `php` absent; no package manager, no lockfile, no lint/format config — match existing file style by hand (2-space indent, double quotes in JS).
-- Fonts must stay self-hosted woff2 in `fonts/`; no CDNs, web fonts, analytics, or external resources of any kind.
+- Fonts load from the university font host `https://fonts.newschool.edu/fonts/` (owner decision; same family of sites as newschool.edu). Do not copy the font files into the repo — they are commercial Typotheque faces licensed to The New School. No other CDNs, web fonts, analytics, or external resources.
 
 ## Testing & QA
 

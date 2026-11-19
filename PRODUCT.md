@@ -39,12 +39,12 @@ Home page for dt.parsons.edu: the entrance to Parsons' BFA and MFA Design & Tech
 - Requested scope: a very basic home page with an elegant procedural, randomized, algorithmic animation as the background. That constraint is binding.
 - No part-time faculty list yet: content doc carries "list T/K" — must not be invented. Omit or mark pending until supplied.
 - `[Curriculum]` link text has no BFA/MFA target of its own beyond the two curriculum URLs in the content doc.
-- No Parsons/New School brand kit, logo file, or type spec is in the repo; nothing in the brand is fabricated.
+- No Parsons/New School brand kit or logo file is in the repo; nothing in the brand is fabricated. Type is the university's official Neue / Neue Display, loaded from the university font host `fonts.newschool.edu` (owner decision: dt.parsons.edu is in the same family of sites), not copied into the repo.
 
 ## Brand Commitments
 
 - Name: Design & Technology (DT); BFA and MFA degree programs at Parsons / The New School.
-- No logo, wordmark, color, or type assets supplied. No binding brand constraints beyond the name and link destinations.
+- Typeface: The New School's Neue and Neue Display, served from `fonts.newschool.edu`. No logo, wordmark, or color assets supplied; no other binding brand constraints beyond the name and link destinations.
 
 ## Evidence on Hand
 

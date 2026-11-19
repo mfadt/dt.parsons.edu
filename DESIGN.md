@@ -11,63 +11,57 @@ colors:
   red-ink: "#a81e4c"
 typography:
   display:
-    fontFamily: "Archivo, 'Helvetica Neue', Helvetica, sans-serif"
-    fontSize: "clamp(2.5rem, 9vw, 8.5rem)"
-    fontWeight: 800
-    lineHeight: 0.92
-    letterSpacing: "-0.025em"
-    fontVariation: "wdth 110"
+    fontFamily: "'Neue Display Random', 'Neue Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    fontSize: "clamp(2.5rem, 7.8vw, 7.1rem)"
+    fontWeight: 900
+    lineHeight: 0.9
+    letterSpacing: "0"
   display-lead:
-    fontFamily: "Archivo, 'Helvetica Neue', Helvetica, sans-serif"
+    fontFamily: "'Neue Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
     fontSize: "clamp(1.6rem, 3.6vw, 3.4rem)"
-    fontWeight: 700
-    lineHeight: 0.92
-    letterSpacing: "-0.025em"
-    fontVariation: "wdth 110"
+    fontWeight: 900
+    lineHeight: 0.9
+    letterSpacing: "-0.01em"
   headline:
-    fontFamily: "Archivo, 'Helvetica Neue', Helvetica, sans-serif"
-    fontSize: "clamp(1.6rem, 4vw, 2.9rem)"
-    fontWeight: 700
+    fontFamily: "'Neue Display Wide', 'Neue Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    fontSize: "clamp(1.8rem, 4.4vw, 3.2rem)"
+    fontWeight: 900
     lineHeight: 1
-    letterSpacing: "-0.015em"
-    fontVariation: "wdth 120"
+    letterSpacing: "0"
   action:
-    fontFamily: "Archivo, 'Helvetica Neue', Helvetica, sans-serif"
-    fontSize: "clamp(1.9rem, 3.2vw, 2.8rem)"
-    fontWeight: 800
+    fontFamily: "'Neue Display Wide', 'Neue Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    fontSize: "clamp(2.1rem, 3.6vw, 3.2rem)"
+    fontWeight: 900
     lineHeight: 1
-    letterSpacing: "-0.01em"
-    fontVariation: "wdth 115"
+    letterSpacing: "0"
   action-foot:
-    fontFamily: "Archivo, 'Helvetica Neue', Helvetica, sans-serif"
-    fontSize: "clamp(1.6rem, 4vw, 2.9rem)"
-    fontWeight: 800
+    fontFamily: "'Neue Display Wide', 'Neue Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    fontSize: "clamp(1.8rem, 4.4vw, 3.2rem)"
+    fontWeight: 900
     lineHeight: 1
-    letterSpacing: "-0.01em"
-    fontVariation: "wdth 115"
+    letterSpacing: "0"
   axis-number:
-    fontFamily: "Archivo, 'Helvetica Neue', Helvetica, sans-serif"
+    fontFamily: "'Neue Display', 'Helvetica Neue', Helvetica, Arial, sans-serif"
     fontSize: "clamp(1.15rem, 2.2vw, 1.6rem)"
-    fontWeight: 700
+    fontWeight: 900
     lineHeight: 1
-    letterSpacing: "0.01em"
-    fontVariation: "wdth 110"
+    letterSpacing: "0"
   body-lead:
-    fontFamily: "Courier Prime, 'Courier New', Courier, monospace"
-    fontSize: "clamp(1.05rem, 1.5vw, 1.25rem)"
+    fontFamily: "Neue, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    fontSize: "clamp(1.125rem, 1.6vw, 1.5rem)"
     fontWeight: 400
-    lineHeight: 1.6
+    lineHeight: 1.4
   body:
-    fontFamily: "Courier Prime, 'Courier New', Courier, monospace"
-    fontSize: "clamp(0.95rem, 1.05vw, 1.05rem)"
+    fontFamily: "Neue, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    fontSize: "clamp(1rem, 0.9rem + 0.25vw, 1.125rem)"
     fontWeight: 400
-    lineHeight: 1.65
+    lineHeight: 1.5
   label:
-    fontFamily: "Courier Prime, 'Courier New', Courier, monospace"
-    fontSize: "0.72rem"
+    fontFamily: "Neue, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    fontSize: "0.75rem"
     fontWeight: 400
-    lineHeight: 1.65
-    letterSpacing: "0.16em"
+    lineHeight: 1.5
+    letterSpacing: "0.12em"
 rounded:
   square: "0px"
 spacing:
@@ -115,15 +109,15 @@ components:
 
 **Creative North Star: "The Executed Chance Score"**
 
-This system is not a document about a program; it is a score that has been performed. The page is one sheet of newsprint (`#e4e2db`) carrying printed ink (`#14171a`), and the marks behind the type are drawn at load time by a chance operation: a 32-bit seed (`Date.now() ^ random32`) feeds an xorshift32 generator that decides every stroke on every layer and throws the page's three-coin I Ching cast (six lines, values 6–9), and the printed receipt — score number, seed hex, hexagram with its changing lines in red — sits at the bottom of the fold. The program's facts sit inside the score as typescript instructions. The page demonstrates the program's own thesis ("critical about technology *with* technology", taught continuously since 1999) rather than describing it. Direction provenance: FORM position 2 of the seven grounded directions (Chance Operations Score), chosen from the pick card over the assigned roll, seed `8b08b090a2979c15`.
+This system is not a document about a program; it is a score that has been performed. The page is one sheet of newsprint (`#e4e2db`) carrying printed ink (`#14171a`), and the marks behind the type are drawn at load time by a chance operation: a 32-bit seed (`Date.now() ^ random32`) feeds an xorshift32 generator that decides every stroke on every layer and throws the page's three-coin I Ching cast (six lines, values 6–9), and the printed receipt — score number, seed hex, hexagram with its changing lines in red — sits at the bottom of the fold. The program's facts sit inside the score as printed instructions. The page demonstrates the program's own thesis ("critical about technology *with* technology", taught continuously since 1999) rather than describing it. Direction provenance: FORM position 2 of the seven grounded directions (Chance Operations Score), chosen from the pick card over the assigned roll, seed `8b08b090a2979c15`.
 
-Everything is flat, ruled, and set by hand: no cards, no photography, no panels, no rounded corners, no shadows. Structure is carried by hairline rules, one solid ink rule per section heading, and a typewritten measure. Two type voices only — a heavy expanded poster grotesque for lettering, a typewriter face for everything that reads as typescript. Depth exists only in the ground: three plotted canvas planes drifting at different parallax rates behind the sheet, plus a fixed sheet frame and a marginal folio spine that keeps the reader's place like printer's marks.
+Everything is flat, ruled, and set by hand: no cards, no photography, no panels, no rounded corners, no shadows. Structure is carried by hairline rules, one solid ink rule per section heading, and a fixed reading measure. Two type voices only, both The New School's own: Neue Display (heavy capitals) for lettering, Neue for everything a reader reads. Depth exists only in the ground: three plotted canvas planes drifting at different parallax rates behind the sheet, plus a fixed sheet frame and a marginal folio spine that keeps the reader's place like printer's marks.
 
 The system is deliberately un-repeatable per visit yet completely legible without it: all content is visible with JS absent, and `prefers-reduced-motion` prints the score complete at once instead of drawing it.
 
 **Key Characteristics:**
 - Newsprint ground with real ink dilution (`ink-70` / `ink-45` / `ink-18`), never a gray palette.
-- Two voices: Archivo (variable, wdth 62–125 / wght 100–900, used at 700–800, width 110–120, uppercase) and Courier Prime 400/700 for all typescript.
+- Two voices, both the university's: Neue Display 900 (Black, Wide, and Random cuts) for uppercase lettering and Neue 400/700 for all reading text, served from `fonts.newschool.edu`.
 - Red appears twice and each has one job: `red` for the display-size action and printed red-pencil marks; `red-ink` for every red at text size.
 - Rules, not containers: 1px hairlines, dotted leaders, one 1px solid ink rule above each section heading with a 2.25rem inset.
 - One authored performance (score draws itself, sections enter, archive axis draws in as ink dries); content visible by default.
@@ -153,30 +147,34 @@ Newsprint, black ink, red pencil. The palette is three pigments on one paper; ev
 
 ## Typography
 
-**Display Font:** Archivo (self-hosted variable, `fonts/archivo-latin.woff2`; wdth 62–125%, wght 100–900) with `"Helvetica Neue", Helvetica, sans-serif`. Shipped use is 700–800 at wdth 110–120, uppercase, negative tracking.
-**Body Font:** Courier Prime (self-hosted, `fonts/courierprime-400.woff2`, `fonts/courierprime-700.woff2`; 400 and 700 only) with `"Courier New", Courier, monospace`.
-**Label/Mono Font:** none distinct — labels are Courier Prime at 0.7–0.75rem, uppercase, tracked +0.14em to +0.16em.
+**Source:** The New School's institutional typefaces — Neue and Neue Display (Typotheque, 2014; Neue is a customised Typotheque Irma made exclusively for The New School). They are not copied into this repo: `css/score.css` declares its own five `@font-face` rules pointing at the university font host, `https://fonts.newschool.edu/fonts/` (woff2, woff fallback), the same files newschool.edu itself loads. The host answers `Access-Control-Allow-Origin: *` and `Cache-Control: immutable`. `index.html` preconnects to it and preloads the two faces the first viewport needs (Neue Display Random, Neue Regular). If the host is unreachable every role falls back to `"Helvetica Neue", Helvetica, Arial, sans-serif` with `font-display: swap`.
 
-**Character:** a heavy, expanded poster grotesque set like hand-lettered show-card capitals, sitting against a typewriter face set at the keyboard measure. The contrast is scale and voice, never color or weight games: Archivo shouts the program's name and the one instruction; Courier Prime types everything a reader actually reads.
+**Display Font:** Neue Display, three cuts, each registered at weight 900 under its own family name — `Neue Display` (Black, normal width), `Neue Display Wide` (expanded; caps 0.70em tall against 0.80em for the others, so Wide roles are sized up to match), and `Neue Display Random` (the identity's chance cut: contextual `liga` alternates swap letters between normal and wide widths). Capitals only; figures are proportional (no `tnum`).
+**Body Font:** Neue 400 and 700 (`neue-Regular`, `neue-Bold`).
+**Label Font:** none distinct — labels are Neue 400 at 0.7–0.75rem, uppercase, tracked +0.12em.
 
-At 1440×900 the ramp measures: masthead second line 129.6px (9vw, weight 800, wdth 110, line-height 0.92, letter-spacing −0.025em) under "PARSONS" at 51.8px; section headings 46.4px (wdth 120, weight 700); APPLY 44.8px; axis years 25.6px; premise 20px on a 68ch measure; body 15.2px at line-height 1.65 (16.8px ceiling above 1600px); captions 11.2–12px, tracked.
+**Character:** The New School's own lettering at poster weight over its own text face. The Random cut is the house's built-in chance operation, so the masthead's letter widths are not a style choice made here but the face performing; the rest of the lettering stays straight so that one line carries it. Neue Display shouts the program's name, the section heads, and the one instruction; Neue sets everything a reader actually reads.
+
+At 1440×900 the ramp measures: masthead second line 112.3px (Random, 7.8vw, line-height 0.9, tracking 0) under "PARSONS" at 51.8px (Black); section headings 51.2px (Wide); APPLY 51.2px (Wide); axis years 25.6px (Black); premise 23px on a 30em measure; body 18px at line-height 1.5 (16px floor); captions 12–14px.
 
 ### Hierarchy
-- **Display** (Archivo 800, `clamp(2.5rem, 9vw, 8.5rem)`, lh 0.92): "DESIGN & TECHNOLOGY" — the masthead's dominant line, uppercase, 9vw at 1440 inside the contract's 9–12vw band.
-- **Display lead** (Archivo 700, `clamp(1.6rem, 3.6vw, 3.4rem)`): "PARSONS", the masthead's small first line. The masthead is two stacked block lines, never wrapped.
-- **Headline** (Archivo 700 wdth 120, `clamp(1.6rem, 4vw, 2.9rem)`, lh 1): section headings — Faculty, Academics, Thesis Archive, and the closing Apply heading.
-- **Action** (Archivo 800 wdth 115, `clamp(1.9rem, 3.2vw, 2.8rem)`): the one word APPLY, in red pencil, underlined by a 3px wipe of its own color on hover/focus.
-- **Axis number** (Archivo 700 wdth 110, `clamp(1.15rem, 2.2vw, 1.6rem)`, tabular lining figures): years on the thesis axis and nothing else.
-- **Body lead** (Courier Prime 400, `clamp(1.05rem, 1.5vw, 1.25rem)`, lh 1.6, `text-wrap: pretty`): the premise line, capped at 68ch.
-- **Body** (Courier Prime 400, `clamp(0.95rem, 1.05vw, 1.05rem)` → 16.8px ceiling, lh 1.65): all reading text, lists, captions, the footer record.
-- **Label** (Courier Prime 400/700, 0.7–0.75rem, uppercase, +0.14em/+0.16em): nameplate, folio spine, roster subsection heads, axis captions, ledger links.
+- **Display** (Neue Display Random 900, `clamp(2.5rem, 7.8vw, 7.1rem)`, lh 0.9, tracking 0): "DESIGN & TECHNOLOGY" — the masthead's dominant line. Random's alternates make "TECHNOLOGY" 9.28em wide, so the cap (7.1rem) is what keeps it inside the 74rem sheet; 9vw under 560px (`clamp(1.85rem, 9vw, 3.4rem)`).
+- **Display lead** (Neue Display Black 900, `clamp(1.6rem, 3.6vw, 3.4rem)`, −0.01em; `clamp(1.15rem, 5vw, 1.6rem)` under 560px): "PARSONS", the masthead's small first line. The masthead is two stacked block lines.
+- **Headline** (Neue Display Wide 900, `clamp(1.8rem, 4.4vw, 3.2rem)`, lh 1): section headings — Faculty, Academics, Thesis Archive, and the closing Apply heading.
+- **Action** (Neue Display Wide 900, `clamp(2.1rem, 3.6vw, 3.2rem)`; `clamp(1.9rem, 9vw, 2.6rem)` under 560px): the one word APPLY, in red pencil, underlined by a 3px wipe of its own color on hover/focus.
+- **Axis number** (Neue Display Black 900, `clamp(1.15rem, 2.2vw, 1.6rem)`): years on the thesis axis and nothing else.
+- **Body lead** (Neue 400, `clamp(1.125rem, 1.6vw, 1.5rem)`, lh 1.4, `text-wrap: pretty`): the premise line, capped at 30em.
+- **Body** (Neue 400, `clamp(1rem, 0.9rem + 0.25vw, 1.125rem)`, lh 1.5): all reading text and lists; the cast record and footer record at 0.875rem.
+- **Label** (Neue 400/700, 0.7–0.75rem, uppercase, +0.12em): nameplate, folio spine, roster subsection heads, axis captions.
 
 ### Named Rules
-**The Two-Voice Rule.** Two families ship, and they are the whole voice palette: Archivo for lettering, Courier Prime for every string that reads as typescript. Every element on the page is set in one of the three `@font-face` declarations in `css/score.css`; a new face is a new world, not a new component.
+**The Two-Voice Rule.** Two families ship, and they are the whole voice palette: Neue Display for lettering, Neue for every string that is read. Every element on the page is set in one of the five `@font-face` declarations in `css/score.css` (Neue 400, Neue 700, Neue Display, Neue Display Wide, Neue Display Random), all served from `fonts.newschool.edu`; other cuts on that host (Ultra, Thin, Light, Black text, italics, the variable TTF) are not part of this system.
 
-**The Upright Rule.** Both faces ship upright only (Archivo is loaded `font-style: normal` at wght 100–900; Courier Prime ships 400 and 700 only). Emphasis comes from weight (Courier Prime 700), tracking, and rules — italic would be a browser-synthesized slant, so it never appears.
+**The Random-Is-Untracked Rule.** Neue Display Random only performs with ligatures on, and browsers switch optional ligatures off under any non-zero `letter-spacing`. Its tracking stays exactly 0, and it is used once, on the masthead line.
 
-**The Typescript Measure Rule.** Reading text is set on a typewriter measure: premise 68ch max, ledger 46rem max, footer record 62ch max. Widening a column of Courier Prime is a layout decision, not a responsive accident.
+**The Upright Rule.** Every face ships upright only, and `html` sets `font-synthesis: none`. Emphasis comes from weight (Neue 700), tracking, and rules; italic and faux bold never appear.
+
+**The Reading Measure Rule.** Reading text is set on a fixed measure: premise 30em max, ledger 46rem max, cast record 34em, footer record 40em. Widening a column is a layout decision, not a responsive accident.
 
 ## Layout
 
@@ -186,9 +184,9 @@ One sheet, one gutter, ruled rhythm. `.sheet` is the page body: `max-width: 74re
 
 **Sections** break with a rule, not a container: `margin-top: var(--step-sec)` = `clamp(3.5rem, 9vh, 6rem)`, then `padding-top: 2.25rem` under a 1px solid ink rule. The `<footer>` uses the same treatment, so the page has one cadence from Faculty to the closing Apply.
 
-**Marginalia are fixed:** `.sheet-frame` is a 1px hairline inset `clamp(0.4rem, 1.4vw, 1rem)` from the viewport on all sides (`pointer-events: none`), and `.spine` is a fixed folio column `clamp(1.9rem, 3vw, 2.9rem)` wide, ruled on its right, holding three vertical-rl items — the mark, the current score (the word "Score" in `red-ink`, its four-digit number in ink 700 tabular), and the current section word. Below 980px the spine disappears; the frame does not.
+**Marginalia are fixed:** `.sheet-frame` is a 1px hairline inset `clamp(0.4rem, 1.4vw, 1rem)` from the viewport on all sides (`pointer-events: none`), and `.spine` is a fixed folio column `clamp(1.9rem, 3vw, 2.9rem)` wide, ruled on its right, holding three vertical-rl items — the mark, the current score (the word "Score" in `red-ink`, its four-digit number in ink 700), and the current section word. Below 980px the spine disappears; the frame does not.
 
-**Responsive:** at 980px the lead collapses to a single column (`min-height: auto`), the faculty grid to one column, and the spine is hidden. At 560px the gutter tightens to `clamp(1rem, 5vw, 1.75rem)`, name columns drop to one, masthead `font-stretch` drops to 100%, masthead line 2 becomes `clamp(1.85rem, 9.4vw, 3.4rem)`, and APPLY becomes `clamp(1.7rem, 8vw, 2.4rem)`. Verified with no horizontal overflow and no section overlap at 320/390/1440.
+**Responsive:** at 980px the lead collapses to a single column (`min-height: auto`), the faculty grid to one column, and the spine is hidden. At 560px the gutter tightens to `clamp(1rem, 5vw, 1.75rem)`, name columns drop to one, "PARSONS" drops to `clamp(1.15rem, 5vw, 1.6rem)`, masthead line 2 becomes `clamp(1.85rem, 9vw, 3.4rem)`, and APPLY becomes `clamp(1.9rem, 9vw, 2.6rem)`. Verified with no element past the viewport edge at 320/390/560/980/1440.
 
 **Spacing rhythm** is clamp-based and viewport-linked, not a fixed scale: gutters and gaps scale 4vw-ish, section breaks 9vh-ish, and row paddings sit at 0.34rem (name rows), 0.5rem (ledger and axis rows).
 
@@ -216,9 +214,9 @@ Square by construction: no `border-radius` is declared anywhere in the styleshee
 ## Components
 
 ### The Apply action (`apply-primary`)
-The one red display word. Archivo 800 wdth 115, uppercase, `clamp(1.9rem, 3.2vw, 2.8rem)`, in `red`; the instruction block carries a 2px `red` top rule with 0.9rem of air below it. Hover/focus shifts the word to ink and wipes a 3px bar of its own color in under 0.45s (`cubic-bezier(0.16, 1, 0.3, 1)`). No button chrome, no background, no radius.
-- **Footer variant** (`apply-foot`): same link at headline size (`clamp(1.6rem, 4vw, 2.9rem)`) as the closing heading itself, plus the typescript line "Come visit us on **D12** · dt.parsons.edu" with `D12` in `red-ink`.
-- **Sub-instruction** (`.visit`): 0.95rem, `ink-70`, with the building name in ink.
+The one red display word. Neue Display Wide 900, uppercase, `clamp(2.1rem, 3.6vw, 3.2rem)`, in `red`; the instruction block carries a 2px `red` top rule with 0.9rem of air below it. Hover/focus shifts the word to ink and wipes a 3px bar of its own color in under 0.45s (`cubic-bezier(0.16, 1, 0.3, 1)`). No button chrome, no background, no radius.
+- **Footer variant** (`apply-foot`): same link at headline size (`clamp(1.8rem, 4.4vw, 3.2rem)`) as the closing heading itself, plus the line "Come visit us on **D12** · dt.parsons.edu" (1.125rem) with `D12` in `red-ink`.
+- **Sub-instruction** (`.visit`): 1rem, `ink-70`, with the building name in ink.
 
 ### Body and lead links
 Body links inherit their text color and underline at 1px with `text-underline-offset: 0.22em`; hover sets them to `red-ink` (never `red`). The premise's two links are the exception written into the build: `red-ink` text on a 2px `red` underline, hover darkening the underline to the text color. Anchor text is the degree word (BFA / MFA), never the URL or "click here".
@@ -228,16 +226,16 @@ Two newspaper columns (`columns: 2`, column-rule `--rule`, gap `clamp(1.5rem,4vw
 - **Pending roster**: the part-time column ships an h3 plus a `.pending` line reading "list to come" in `red-ink` on the same hairline rhythm. The pending line is the honest state; the list is never invented.
 
 ### Ledger rows (`.ledger`)
-Academics as a typeset contents line: flex row on baseline, label, a flexing 1px dotted leader in `ink-45` lifted `translateY(-0.25em)`, then a small `ink-70` link (0.85em, +0.04em tracking, hairline rule under each row) that goes `red-ink` on hover. Measure capped at 46rem. The destination is written as its domain text, not as a button.
+Academics as a typeset contents line: flex row on baseline, label, a flexing 1px dotted leader in `ink-45` lifted `translateY(-0.25em)`, then a small `ink-70` link (0.875em, +0.02em tracking, hairline rule under each row) that goes `red-ink` on hover. Measure capped at 46rem. The destination is written as its domain text, not as a button.
 
 ### Thesis axis (`.axis`)
-The archive as one time axis: `grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr))`, column gap `clamp(1rem,3vw,2.5rem)`, one hairline under each cell, each cell a baseline pair — Archivo tabular year left, small tracked caption right (DT for 2026–2020, MFADT for 2019–2011). The 1999 origin cell is not a link and is set entirely in `red-ink`; hover turns a year `red-ink` too. 17 cells, all real external archive URLs — the page links out rather than hosting year sites.
+The archive as one time axis: `grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr))`, column gap `clamp(1rem,3vw,2.5rem)`, one hairline under each cell, each cell a baseline pair — Neue Display year left, small tracked caption right (DT for 2026–2020, MFADT for 2019–2011). The 1999 origin cell is not a link and is set entirely in `red-ink`; hover turns a year `red-ink` too. 17 cells, all real external archive URLs — the page links out rather than hosting year sites.
 
 ### Folio spine and sheet frame
-Fixed print furniture, `pointer-events: none`: the spine is 0.7rem uppercase Courier at +0.14em in `ink-70`, with the score number in ink 700 tabular and the word "Score" in `red-ink`; the mark item is `rotate(180deg)` so it reads bottom-up, and the sheet frame is the same hairline running round the viewport. The folio word is the last section whose top sits above the point 42% down the viewport (Lead / Faculty / Academics / Thesis / Apply), rewritten on scroll only when it changes.
+Fixed print furniture, `pointer-events: none`: the spine is 0.7rem uppercase Neue at +0.12em in `ink-70`, with the score number in ink 700 and the word "Score" in `red-ink`; the mark item is `rotate(180deg)` so it reads bottom-up, and the sheet frame is the same hairline running round the viewport. The folio word is the last section whose top sits above the point 42% down the viewport (Lead / Faculty / Academics / Thesis / Apply), rewritten on scroll only when it changes.
 
 ### The cast block and Re-cast control
-The printed receipt at the bottom of the fold: hexagram SVG (`viewBox 0 0 96 110`, `role="img"`, its own hidden accessible title describing the throw) beside a record in 0.85rem `ink-70` — `Score` + four tabular digits, `· seed` + uppercase hex, then the line `cast: {upper trigram} over {lower trigram} · N changing line(s)`, and the note that the marks are a chance score being performed now (`Reload, or re-cast, for a different one.`). `re-cast` is a plain underlined text button in `red-ink` (`border: 0`, `background: none`, `font: inherit`) that re-seeds, rewrites the cast line, redraws the hexagram, and re-performs; hover sends it to ink. It is a control, not a card.
+The printed receipt at the bottom of the fold: hexagram SVG (`viewBox 0 0 96 110`, `role="img"`, its own hidden accessible title describing the throw) beside a record in 0.875rem `ink-70` — `Score` + four digits, `· seed` + uppercase hex, then the line `cast: {upper trigram} over {lower trigram} · N changing line(s)`, and the note that the marks are a chance score being performed now (`Reload, or re-cast, for a different one.`). `re-cast` is a plain underlined text button in `red-ink` (`border: 0`, `background: none`, `font: inherit`) that re-seeds, rewrites the cast line, redraws the hexagram, and re-performs; hover sends it to ink. It is a control, not a card.
 
 ### The chance engine (mechanism, documented for reuse)
 Seed = `Date.now() ^ random32` (re-seeded on every re-cast; guarded to `0x5f3759df` if it lands on zero), and `xorshift32(seed)` drives everything downstream — the layer plans, the live marks, and the I Ching throw itself. Six lines × three coins (each coin 2 or 3) give I Ching values 6–9, with 6 and 9 as changing lines; the score number is `1000 + |seed| % 9000` and the seed prints as uppercase hex in both the spine and the receipt. Plans are stroke-counted and queued per layer, then 14–23 live marks (small arcs and short horizontal runs, alpha 0.20–0.44) are appended onto the mid and near planes after the first pass, at 900–2700ms intervals, with the queue budgeted at 14 strokes per animation frame. Canvases cap at DPR 2 and drop to DPR 1 above ~7M device pixels; a resize re-sizes and re-performs after a 220ms debounce. Under reduced motion every plan is drawn synchronously in a single pass instead.
@@ -255,8 +253,8 @@ One authored performance, all entrances gated behind state classes on `<html>`: 
 ### Do:
 - **Do** keep the shipped palette exactly: `#e4e2db` ground, `#14171a` ink with rgba dilution at 0.7 / 0.45 / 0.18, and the two reds `#c2255c` / `#a81e4c`. Text tones are `ink` and `ink-70` only.
 - **Do** use `red-ink` (5.48:1 on the ground) for red at text size and `red` (4.36:1, clears the 3:1 large-text floor) only at display size or as a mark, rule, or selection fill.
-- **Do** set lettering in Archivo 700–800 at wdth 110–120, uppercase, negative tracking, and set all reading text in Courier Prime 400/700 at 1.65 line-height (1.6 for the premise lead).
-- **Do** put every reading column on a measure: 68ch for the premise, 46rem for the ledger, 62ch for the footer record.
+- **Do** set lettering in Neue Display 900, uppercase: Random for the masthead line at tracking 0, Black for "PARSONS" and the axis years, Wide for section headings and APPLY. Set all reading text in Neue 400/700 at 1.5 line-height (1.4 for the premise lead).
+- **Do** put every reading column on a measure: 30em for the premise, 46rem for the ledger, 40em for the footer record.
 - **Do** build structure from rules and space: hairline `--rule` rows, a 1px solid ink rule above each section heading with 2.25rem of padding below it, `--step-sec` between sections.
 - **Do** keep every generated mark tied to the cast seed, and keep canvases sized to viewport + parallax travel so the whole document is inked.
 - **Do** keep content readable with JS absent and with reduced motion: gate entrances behind `html.js` / `html.drawn` / `html.performed` and let the reduced-motion query force them visible.
@@ -266,7 +264,7 @@ One authored performance, all entrances gated behind state classes on `<html>`: 
 ### Don't:
 - **Don't** invent names, courses, claims, thesis years, or a part-time roster — the content authority is `docs/content.md` and the page stays within it.
 - **Don't** add cards, photo panels, fills, rounded corners, shadows, blurs, or gradient surfaces to the reading layer.
-- **Don't** set text in a face outside the three shipped `@font-face` declarations (Archivo wght 100–900 / wdth 62–125 from one variable file; Courier Prime 400 and 700), and **don't** fake italic or synthesize weight — both faces load upright, and anything else is a browser-synthesized stand-in.
+- **Don't** set text in a face outside the five shipped `@font-face` declarations (Neue 400 and 700; Neue Display, Neue Display Wide, Neue Display Random at 900), **don't** copy the font files into this repo or load them from anywhere but `fonts.newschool.edu`, and **don't** fake italic or synthesize weight.
 - **Don't** use `red` on body-size text, on backgrounds, or on headings; don't use `ink-45` or `ink-18` for text (2.79:1 and 1.45:1 on the ground, rule tones only).
 - **Don't** put a label line above a section heading: headings sit directly on their own 1px ink rule with 2.25rem of air, and the sheet's only standing label row is the nameplate rule at the top of the lead.
 - **Don't** animate content that isn't already visible without it: entrances may fade and rise (0.5–0.9s, `cubic-bezier(0.16, 1, 0.3, 1)`), never gate the text itself.
