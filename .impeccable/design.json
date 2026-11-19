@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T22:36:48Z",
+  "title": "Design System: Parsons Design & Technology — Chance Operations Score",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Newsprint",
+        "tonalRamp": ["#636463", "#80817e", "#999996", "#aeada9", "#bfbdb8", "#cbcac4", "#dad8d1", "#e4e2db"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Printed Ink",
+        "tonalRamp": ["#14171a", "#333537", "#525454", "#727271", "#868784", "#a6a5a1", "#bfbdb8", "#d3d2cc"]
+      },
+      "ink-70": {
+        "role": "neutral",
+        "displayName": "Ink, Second Impression",
+        "tonalRamp": ["#202326", "#333537", "#424444", "#525454", "#636463", "#787877", "#8d8d8a", "#a6a5a1"]
+      },
+      "ink-45": {
+        "role": "neutral",
+        "displayName": "Ink, Third Impression (rule tone)",
+        "tonalRamp": ["#575858", "#676867", "#747473", "#868784", "#91918e", "#9d9d99", "#acaba7", "#bab9b4"]
+      },
+      "ink-18": {
+        "role": "neutral",
+        "displayName": "Ink, Hairline",
+        "tonalRamp": ["#999996", "#a6a5a1", "#aeada9", "#bfbdb8", "#c5c4be", "#cbcac4", "#d1d0ca", "#d8d6cf"]
+      },
+      "red": {
+        "role": "primary",
+        "displayName": "Red Pencil (display size and marks only)",
+        "tonalRamp": ["#5d1d36", "#8a2147", "#c2255c", "#cc5a80", "#d17a95", "#d696a8", "#dbb1ba", "#dfc6c8"]
+      },
+      "red-ink": {
+        "role": "primary",
+        "displayName": "Red Typescript (every red at text size)",
+        "tonalRamp": ["#651b36", "#871c41", "#a81e4c", "#b5496b", "#c06c85", "#cb909f", "#d4adb4", "#dbc5c6"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Masthead line 2 — DESIGN & TECHNOLOGY. Archivo 800, wdth 110, uppercase, 9vw at desktop." },
+      "display-lead": { "displayName": "Display Lead", "purpose": "Masthead line 1 — PARSONS, stacked above the display line, never wrapped." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings (Faculty, Academics, Thesis Archive) sitting on their own 1px ink rule." },
+      "action": { "displayName": "Action Lettering", "purpose": "The one red display word APPLY inside the instruction block." },
+      "action-foot": { "displayName": "Action Lettering, Closing", "purpose": "APPLY at heading size as the page's closing heading." },
+      "axis-number": { "displayName": "Axis Number", "purpose": "Thesis-archive years only, tabular lining figures." },
+      "body-lead": { "displayName": "Body Lead", "purpose": "The premise line on a 68ch typewriter measure." },
+      "body": { "displayName": "Body", "purpose": "All reading text, lists, captions, footer record — Courier Prime 400 at 1.65." },
+      "label": { "displayName": "Typescript Label", "purpose": "Nameplate, folio spine, roster subsection heads, axis captions, ledger links: uppercase Courier, tracked +0.14em/+0.16em." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-sheet", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The one easing in the system; every non-axis transition uses it." },
+      { "name": "far-plane-in", "value": "opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Far canvas plane from 0 to 0.5 opacity when html.drawn lands." },
+      { "name": "lead-in", "value": "opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Nameplate and masthead enter after the score starts drawing." },
+      { "name": "axis-rise", "value": "opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Thesis axis items rising 0.45rem into place, delayed 45ms per item." },
+      { "name": "apply-wipe", "value": "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The 3px APPLY underline wiping in from the left on hover/focus." },
+      { "name": "reduced-motion-floor", "value": "transition-duration: 0.01ms !important; animation-duration: 0.01ms !important", "purpose": "prefers-reduced-motion: every gated element forced visible, the score printed complete in one pass." }
+    ],
+    "breakpoints": [
+      { "name": "sheet-stack", "value": "980px (max-width)" },
+      { "name": "phone", "value": "560px (max-width)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Apply Instruction Block",
+      "kind": "button",
+      "refersTo": "action-apply",
+      "description": "The page's single primary action: a red display word inside a red-pencil ruled instruction margin.",
+      "html": "<aside class=\"ds-instruction\"><a class=\"ds-apply\" href=\"https://www.newschool.edu/apply/\">Apply</a><p class=\"ds-visit\">Come visit us on <b>D12</b></p></aside>",
+      "css": ".ds-instruction{border-top:2px solid var(--red,#c2255c);padding-top:0.9rem;font-family:var(--type,\"Courier Prime\",monospace);color:var(--ink,#14171a)}.ds-apply{display:inline-block;font-family:var(--display,\"Archivo\",sans-serif);font-weight:800;font-stretch:115%;font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1;letter-spacing:-0.01em;text-transform:uppercase;text-decoration:none;color:var(--red,#c2255c)}.ds-apply::after{content:\"\";display:block;height:3px;margin-top:0.28em;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform 0.45s cubic-bezier(0.16,1,0.3,1)}.ds-apply:hover,.ds-apply:focus-visible{color:var(--ink,#14171a)}.ds-apply:hover::after,.ds-apply:focus-visible::after{transform:scaleX(1)}.ds-apply:focus-visible{outline:2px solid var(--red-ink,#a81e4c);outline-offset:3px}.ds-visit{margin:0.7rem 0 0;font-size:0.95rem;color:var(--ink-70,rgba(20,23,26,0.7))}.ds-visit b{color:var(--ink,#14171a)}@media (max-width:560px){.ds-apply{font-size:clamp(1.7rem,8vw,2.4rem)}}"
+    },
+    {
+      "name": "Closing Apply Heading",
+      "kind": "button",
+      "refersTo": "action-apply-foot",
+      "description": "The repeat action at the foot of the sheet, set as the closing heading itself.",
+      "html": "<h2 class=\"ds-h-close\"><a class=\"ds-apply-foot\" href=\"https://www.newschool.edu/apply/\">Apply</a></h2><p class=\"ds-come\">Come visit us on <b>D12</b> \u00b7 dt.parsons.edu</p>",
+      "css": ".ds-h-close{margin:0;font-family:var(--display,\"Archivo\",sans-serif);font-weight:700;font-stretch:120%;line-height:1;text-transform:uppercase}.ds-apply-foot{font-family:var(--display,\"Archivo\",sans-serif);font-weight:800;font-stretch:115%;font-size:clamp(1.6rem,4vw,2.9rem);line-height:1;letter-spacing:-0.01em;text-transform:uppercase;text-decoration:none;color:var(--red,#c2255c)}.ds-apply-foot:hover,.ds-apply-foot:focus-visible{color:var(--ink,#14171a)}.ds-apply-foot:focus-visible{outline:2px solid var(--red-ink,#a81e4c);outline-offset:3px}.ds-come{margin:1.6rem 0 0;font-family:var(--type,\"Courier Prime\",monospace);font-size:1rem;color:var(--ink,#14171a)}.ds-come b{color:var(--red-ink,#a81e4c)}"
+    },
+    {
+      "name": "Premise Link",
+      "kind": "custom",
+      "refersTo": "link-lead",
+      "description": "The only inline links carrying their own red pencil underline: the degree words inside the premise.",
+      "html": "<p class=\"ds-premise\"><a class=\"ds-link-lead\" href=\"https://www.newschool.edu/parsons/bfa-design-technology/\">BFA</a> and <a class=\"ds-link-lead\" href=\"https://www.newschool.edu/parsons/mfa-design-technology/\">MFA</a> degree programs at Parsons where we are critical about technology with technology since 1999.</p>",
+      "css": ".ds-premise{margin:0;max-width:68ch;font-family:var(--type,\"Courier Prime\",monospace);font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6;text-wrap:pretty;color:var(--ink,#14171a)}.ds-link-lead{color:var(--red-ink,#a81e4c);text-decoration-line:underline;text-decoration-color:var(--red,#c2255c);text-decoration-thickness:2px;text-underline-offset:0.22em}.ds-link-lead:hover{text-decoration-color:currentColor}.ds-link-lead:focus-visible{outline:2px solid var(--red-ink,#a81e4c);outline-offset:3px}"
+    },
+    {
+      "name": "Body Link",
+      "kind": "custom",
+      "refersTo": "link-body",
+      "description": "Every other inline link: inherits its text color, 1px underline, red-ink only on hover.",
+      "html": "<p class=\"ds-body\"><a class=\"ds-link-body\" href=\"https://courses.newschool.edu\">courses.newschool.edu</a></p>",
+      "css": ".ds-body{margin:0;font-family:var(--type,\"Courier Prime\",monospace);font-size:clamp(0.95rem,1.05vw,1.05rem);line-height:1.65;color:var(--ink,#14171a)}.ds-link-body{color:inherit;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:0.22em}.ds-link-body:hover{color:var(--red-ink,#a81e4c)}.ds-link-body:focus-visible{outline:2px solid var(--red-ink,#a81e4c);outline-offset:3px}"
+    },
+    {
+      "name": "Re-cast Control",
+      "kind": "button",
+      "refersTo": "recast-button",
+      "description": "The chance control inside the printed cast record: plain underlined red text, no chrome.",
+      "html": "<p class=\"ds-cast-note\">The marks are a chance score being performed in your browser now. Reload, or <button type=\"button\" class=\"ds-recast\">re-cast</button>, for a different one.</p>",
+      "css": ".ds-cast-note{margin:0;font-family:var(--type,\"Courier Prime\",monospace);font-size:0.85rem;line-height:1.65;color:var(--ink-70,rgba(20,23,26,0.7));max-width:36em}.ds-recast{font:inherit;font-family:var(--type,\"Courier Prime\",monospace);color:var(--red-ink,#a81e4c);background:none;border:0;padding:0;cursor:pointer;text-decoration-line:underline;text-decoration-color:currentColor;text-underline-offset:0.22em}.ds-recast:hover{color:var(--ink,#14171a)}.ds-recast:focus-visible{outline:2px solid var(--red-ink,#a81e4c);outline-offset:3px}"
+    },
+    {
+      "name": "Thesis Axis Cell",
+      "kind": "custom",
+      "refersTo": "axis-year",
+      "description": "One year of the archive as a ruled cell: tabular year left, tracked caption right, the 1999 origin cell in red and not a link.",
+      "html": "<ol class=\"ds-axis\"><li class=\"ds-axis-origin\"><span class=\"ds-axis-year\">1999</span><span class=\"ds-axis-what\">since</span></li><li><a class=\"ds-axis-link\" href=\"https://parsons.edu/dt-2026/\"><span class=\"ds-axis-year\">2026</span><span class=\"ds-axis-what\">DT</span></a></li><li><a class=\"ds-axis-link\" href=\"https://mfadt.parsons.edu/2019/\"><span class=\"ds-axis-year\">2019</span><span class=\"ds-axis-what\">MFADT</span></a></li></ol>",
+      "css": ".ds-axis{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:0 clamp(1rem,3vw,2.5rem);font-family:var(--type,\"Courier Prime\",monospace)}.ds-axis li{border-bottom:1px solid var(--ink-18,rgba(20,23,26,0.18))}.ds-axis-link{display:flex;align-items:baseline;justify-content:space-between;gap:0.75rem;padding:0.5rem 0;text-decoration:none;color:var(--ink,#14171a)}.ds-axis-year{font-family:var(--display,\"Archivo\",sans-serif);font-weight:700;font-stretch:110%;font-size:clamp(1.15rem,2.2vw,1.6rem);font-variant-numeric:tabular-nums lining-nums;letter-spacing:0.01em}.ds-axis-what{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-70,rgba(20,23,26,0.7))}.ds-axis-link:hover .ds-axis-year,.ds-axis-link:focus-visible .ds-axis-year{color:var(--red-ink,#a81e4c)}.ds-axis-link:focus-visible{outline:2px solid var(--red-ink,#a81e4c);outline-offset:3px}.ds-axis-origin{display:flex;align-items:baseline;justify-content:space-between;gap:0.75rem;padding:0.5rem 0;color:var(--red-ink,#a81e4c)}"
+    },
+    {
+      "name": "Roster Row List",
+      "kind": "custom",
+      "refersTo": "link-body",
+      "description": "The full-time faculty roster: two ruled newspaper columns, each row ticked in red, pending lists marked the same way.",
+      "html": "<ul class=\"ds-names\"><li>David Carroll</li><li>Jane Pirone</li><li>Anezka Sebek <span class=\"ds-em\">emeritus</span></li></ul><p class=\"ds-pending\">list to come</p>",
+      "css": ".ds-names{list-style:none;margin:0;padding:0;columns:2;column-gap:clamp(1.5rem,4vw,3rem);column-rule:1px solid var(--ink-18,rgba(20,23,26,0.18));font-family:var(--type,\"Courier Prime\",monospace);color:var(--ink,#14171a)}.ds-names li{break-inside:avoid;padding:0.34rem 0 0.34rem 0.9rem;border-bottom:1px solid var(--ink-18,rgba(20,23,26,0.18));position:relative}.ds-names li::before{content:\"\";position:absolute;left:0;top:0.95em;width:0.45em;height:1px;background:var(--red,#c2255c)}.ds-names .ds-em{color:var(--ink-70,rgba(20,23,26,0.7));font-size:0.85em}.ds-pending{margin:0;padding:0.34rem 0;border-bottom:1px solid var(--ink-18,rgba(20,23,26,0.18));font-family:var(--type,\"Courier Prime\",monospace);color:var(--red-ink,#a81e4c)}@media (max-width:560px){.ds-names{columns:1}}"
+    },
+    {
+      "name": "Ledger Row",
+      "kind": "custom",
+      "refersTo": "link-body",
+      "description": "Academics as a typeset contents line with a dotted leader running to the destination.",
+      "html": "<ul class=\"ds-ledger\"><li><span>Curriculum \u2014 MFA</span><span class=\"ds-leader\"></span><a href=\"https://www.newschool.edu/parsons/mfa-design-technology-curriculum/\">newschool.edu</a></li></ul>",
+      "css": ".ds-ledger{list-style:none;margin:0;padding:0;max-width:46rem;font-family:var(--type,\"Courier Prime\",monospace);color:var(--ink,#14171a)}.ds-ledger li{display:flex;align-items:baseline;gap:0.6rem;padding:0.5rem 0;border-bottom:1px solid var(--ink-18,rgba(20,23,26,0.18))}.ds-ledger .ds-leader{flex:1;border-bottom:1px dotted var(--ink-45,rgba(20,23,26,0.45));transform:translateY(-0.25em)}.ds-ledger a{font-size:0.85em;letter-spacing:0.04em;color:var(--ink-70,rgba(20,23,26,0.7));text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:0.22em}.ds-ledger a:hover{color:var(--red-ink,#a81e4c)}.ds-ledger a:focus-visible{outline:2px solid var(--red-ink,#a81e4c);outline-offset:3px}"
+    },
+    {
+      "name": "Folio Spine",
+      "kind": "nav",
+      "refersTo": "folio-spine",
+      "description": "Fixed marginal furniture: the mark, the current score number, and the current section word, read vertically.",
+      "html": "<div class=\"ds-spine\"><span class=\"ds-spine-mark\">Parsons Design &amp; Technology</span><span class=\"ds-spine-score\">Score <b>4173</b></span><span>Thesis</span></div>",
+      "css": ".ds-spine{position:fixed;left:clamp(0.4rem,1.4vw,1rem);top:0;bottom:0;width:clamp(1.9rem,3vw,2.9rem);display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:clamp(1.6rem,4vh,3rem) 0;border-right:1px solid var(--ink-18,rgba(20,23,26,0.18));font-family:var(--type,\"Courier Prime\",monospace);font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-70,rgba(20,23,26,0.7));pointer-events:none;z-index:4}.ds-spine span{writing-mode:vertical-rl}.ds-spine-mark{transform:rotate(180deg)}.ds-spine-score{color:var(--red-ink,#a81e4c)}.ds-spine b{color:var(--ink,#14171a);font-weight:700;font-variant-numeric:tabular-nums}@media (max-width:980px){.ds-spine{display:none}}"
+    },
+    {
+      "name": "Printed Cast Block",
+      "kind": "custom",
+      "refersTo": "recast-button",
+      "description": "The receipt of the chance operation: hexagram, score number, seed hex, cast reading.",
+      "html": "<div class=\"ds-cast\"><svg class=\"ds-hexagram\" viewBox=\"0 0 96 110\" role=\"img\" aria-label=\"This page's chance cast\"><rect x=\"4\" y=\"104\" width=\"88\" height=\"6\" fill=\"currentColor\"/><rect x=\"4\" y=\"86\" width=\"38\" height=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"58\" y=\"86\" width=\"34\" height=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"4\" y=\"32\" width=\"88\" height=\"6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg><div class=\"ds-cast-record\"><p>Score <b>4173</b> \u00b7 seed <b>0x3F6C1A92</b></p><p>cast: Heaven over Earth \u00b7 1 changing line</p></div></div>",
+      "css": ".ds-cast{display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(1rem,3vw,2.5rem);border-top:1px solid var(--ink-18,rgba(20,23,26,0.18));padding-top:1.1rem;font-family:var(--type,\"Courier Prime\",monospace);font-size:0.85rem;color:var(--ink-70,rgba(20,23,26,0.7))}.ds-hexagram{width:3.6rem;height:4.1rem;flex:none;color:var(--ink,#14171a)}.ds-cast-record p{margin:0 0 0.35rem;max-width:36em}.ds-cast-record b{color:var(--ink,#14171a);font-variant-numeric:tabular-nums}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Executed Chance Score",
+    "overview": "This system is not a document about a program; it is a score that has been performed. The page is one sheet of newsprint (#e4e2db) carrying printed ink (#14171a), and the marks behind the type are drawn at load time by a chance operation: a 32-bit seed (Date.now() ^ random32) feeds an xorshift32 generator that decides every stroke on every layer and throws the page's three-coin I Ching cast (six lines, values 6-9), and the printed receipt \u2014 score number, seed hex, hexagram with its changing lines in red \u2014 sits at the bottom of the fold. The program's facts sit inside the score as typescript instructions. The page demonstrates the program's own thesis (\"critical about technology with technology\", taught continuously since 1999) rather than describing it. Direction provenance: FORM position 2 of the seven grounded directions (Chance Operations Score), chosen from the pick card over the assigned roll, seed 8b08b090a2979c15.\n\nEverything is flat, ruled, and set by hand: no cards, no photography, no panels, no rounded corners, no shadows. Structure is carried by hairline rules, one solid ink rule per section heading, and a typewritten measure. Two type voices only \u2014 a heavy expanded poster grotesque for lettering, a typewriter face for everything that reads as typescript. Depth exists only in the ground: three plotted canvas planes drifting at different parallax rates behind the sheet, plus a fixed sheet frame and a marginal folio spine that keeps the reader's place like printer's marks.\n\nThe system is deliberately un-repeatable per visit yet completely legible without it: all content is visible with JS absent, and prefers-reduced-motion prints the score complete at once instead of drawing it.",
+    "keyCharacteristics": [
+      "Newsprint ground with real ink dilution (ink-70 / ink-45 / ink-18), never a gray palette.",
+      "Two voices: Archivo (variable, wdth 62-125 / wght 100-900, used at 700-800, width 110-120, uppercase) and Courier Prime 400/700 for all typescript.",
+      "Red appears twice and each has one job: red for the display-size action and printed red-pencil marks; red-ink for every red at text size.",
+      "Rules, not containers: 1px hairlines, dotted leaders, one 1px solid ink rule above each section heading with a 2.25rem inset.",
+      "One authored performance (score draws itself, sections enter, archive axis draws in as ink dries); content visible by default.",
+      "The cast receipt is content, not decoration: score number, seed hex, upper-over-lower trigram names, changing-line count."
+    ],
+    "rules": [
+      { "name": "The Red-Pencil Rule", "body": "Red is a pencil, not a paint. It marks the instruction, the action, and the parts of the record that chance decided (changing lines, the origin year, a list that has not arrived yet). If red appears on a surface, a card, a heading, or a hover fill, it has stopped being a pencil.", "section": "colors" },
+      { "name": "The Two Reds Rule", "body": "red exists for display-size lettering and marks; red-ink exists for text size. Never let red drop to body size, never let red-ink be the poster word.", "section": "colors" },
+      { "name": "The Printed-Impression Rule", "body": "Mid-tones are ink diluted, not grays: ink-70 is text, ink-45 is a rule, ink-18 is a hairline. A new neutral hex is a defect in this system, not an extension of it.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Two families ship, and they are the whole voice palette: Archivo for lettering, Courier Prime for every string that reads as typescript. Every element on the page is set in one of the three @font-face declarations in css/score.css; a new face is a new world, not a new component.", "section": "typography" },
+      { "name": "The Upright Rule", "body": "Both faces ship upright only (Archivo is loaded font-style: normal at wght 100-900; Courier Prime ships 400 and 700 only). Emphasis comes from weight (Courier Prime 700), tracking, and rules \u2014 italic would be a browser-synthesized slant, so it never appears.", "section": "typography" },
+      { "name": "The Typescript Measure Rule", "body": "Reading text is set on a typewriter measure: premise 68ch max, ledger 46rem max, footer record 62ch max. Widening a column of Courier Prime is a layout decision, not a responsive accident.", "section": "typography" },
+      { "name": "The Flat Sheet Rule", "body": "Nothing in the reading layer lifts, casts, or floats. Depth that isn't ink on paper doesn't belong here.", "section": "elevation" },
+      { "name": "The Full-Sheet Ink Rule", "body": "Every canvas spans the viewport plus its own parallax travel (height = vh x 1.16 + (docH - vh) x rate), so no band of a long document is left without score marks. Measured shipped coverage: 10.2% of the full page inked, every height band 6.8-10.3%.", "section": "elevation" },
+      { "name": "The Rule-Not-Container Rule", "body": "Structure is drawn with lines. A bordered box with fill, radius, or padding-as-frame is a card, and cards are refused by the world (OWN-WORLD: \"No cards, no photography, no gray mid-tones except printed ink\").", "section": "shapes" },
+      { "name": "The Receipt Rule", "body": "Any chance output shown to the user carries its provenance: score number, seed hex, cast reading. A generated background without a printed cast is decoration.", "section": "components" },
+      { "name": "The Pending Row Rule", "body": "Missing content stays visibly missing in the red pencil (\"list to come\"). No placeholder names, no lorem, no invented roster.", "section": "components" }
+    ],
+    "dos": [
+      "Do keep the shipped palette exactly: #e4e2db ground, #14171a ink with rgba dilution at 0.7 / 0.45 / 0.18, and the two reds #c2255c / #a81e4c. Text tones are ink and ink-70 only.",
+      "Do use red-ink (5.48:1 on the ground) for red at text size and red (4.36:1, clears the 3:1 large-text floor) only at display size or as a mark, rule, or selection fill.",
+      "Do set lettering in Archivo 700-800 at wdth 110-120, uppercase, negative tracking, and set all reading text in Courier Prime 400/700 at 1.65 line-height (1.6 for the premise lead).",
+      "Do put every reading column on a measure: 68ch for the premise, 46rem for the ledger, 62ch for the footer record.",
+      "Do build structure from rules and space: hairline --rule rows, a 1px solid ink rule above each section heading with 2.25rem of padding below it, --step-sec between sections.",
+      "Do keep every generated mark tied to the cast seed, and keep canvases sized to viewport + parallax travel so the whole document is inked.",
+      "Do keep content readable with JS absent and with reduced motion: gate entrances behind html.js / html.drawn / html.performed and let the reduced-motion query force them visible.",
+      "Do source all copy from docs/content.md and keep its links (degree pages, curriculum, courses, and the 2011-2026 year URLs); link out to year archives rather than hosting them here.",
+      "Do mark genuinely absent content in the red pencil, as with the part-time roster's \"list to come\"."
+    ],
+    "donts": [
+      "Don't invent names, courses, claims, thesis years, or a part-time roster \u2014 the content authority is docs/content.md and the page stays within it.",
+      "Don't add cards, photo panels, fills, rounded corners, shadows, blurs, or gradient surfaces to the reading layer.",
+      "Don't set text in a face outside the three shipped @font-face declarations (Archivo wght 100-900 / wdth 62-125 from one variable file; Courier Prime 400 and 700), and don't fake italic or synthesize weight \u2014 both faces load upright, and anything else is a browser-synthesized stand-in.",
+      "Don't put a label line above a section heading: headings sit directly on their own 1px ink rule with 2.25rem of air, and the sheet's only standing label row is the nameplate rule at the top of the lead.",
+      "Don't use red on body-size text, on backgrounds, or on headings; don't use ink-45 or ink-18 for text (2.79:1 and 1.45:1 on the ground, rule tones only).",
+      "Don't animate content that isn't already visible without it: entrances may fade and rise (0.5-0.9s, cubic-bezier(0.16, 1, 0.3, 1)), never gate the text itself.",
+      "Don't change the ground to a whiter paper to satisfy a palette warning: #e4e2db is the named newsprint of the world and the finish review kept it by decision."
+    ]
+  }
+}
