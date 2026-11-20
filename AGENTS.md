@@ -43,7 +43,7 @@ No build, no package.json, no npm scripts. Serve statically and open `index.html
 python3 -m http.server 8000        # node/npx also available; python3 preferred
 ```
 
-Verify at 320, 390, 560, 980, 1440 px; check with JS disabled and with reduced motion emulated (reference screenshots: `.impeccable/review/*.png`). Git: branch `main`, remote `origin` → `https://github.com/profcarroll/dt.parsons.edu.git` (note: local dir is `mfadt.parsons.edu`). Commit style: plain descriptive sentence, no Conventional Commits prefix; body references `docs/content.md` and the surface brief.
+Verify at 320, 390, 560, 980, 1440 px; check with JS disabled and with reduced motion emulated (reference screenshots: `.impeccable/review/*.png`). Git: branch `main`, remote `origin` → `https://github.com/mfadt/dt.parsons.edu.git` (public, transferred from `profcarroll/dt.parsons.edu`; note: local dir is `mfadt.parsons.edu`). Commit style: plain descriptive sentence, no Conventional Commits prefix; body references `docs/content.md` and the surface brief.
 
 ## Code Conventions & Common Patterns
 
